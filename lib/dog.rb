@@ -67,7 +67,19 @@ class Dog
     dog = DB[:conn].execute(sql, name)[0]
 
     new_dog = self.new(name: dog[1], breed: dog[2], id: dog[0])
-    #new_dog
+  end
+
+  def self.find_by_id(id)
+    sql = <<-SQL
+      SELECT *
+      FROM dogs
+      WHERE id = ?
+      LIMIT 1;
+    SQL
+
+    dog = DB[:conn].execute(sql, id)[0]
+
+    new_dog = self.new(name: dog[1], breed: dog[2], id: dog[0])
   end
 
   def update

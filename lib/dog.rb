@@ -50,6 +50,7 @@ class Dog
     dog = self.new(dog_hash[:name], dog_hash[:breed])
     dog.save
     dog
+    binding.pry
   end
 
 end

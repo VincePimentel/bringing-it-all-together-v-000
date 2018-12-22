@@ -1,3 +1,5 @@
+require 'pry'
+
 class Dog
   attr_accessor :name, :breed
   attr_reader :id
@@ -26,12 +28,12 @@ class Dog
     DB[:conn].execute(sql)
   end
 
-  def self.new_from_db
-    
+  def self.new_from_db(row)
+    binding.pry
   end
 
   def save
-    
+
   end
 
 end

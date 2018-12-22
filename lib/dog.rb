@@ -46,8 +46,7 @@ class Dog
     self
   end
 
-  def self.create(name:, breed:)
-    binding.pry
+  def self.create
   end
 
 end

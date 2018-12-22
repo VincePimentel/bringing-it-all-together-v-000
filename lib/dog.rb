@@ -88,9 +88,10 @@ class Dog
     if dog.empty?
       self.create(name: name, breed: breed)
     else
-
+      dog
+      binding.pry
     end
-    binding.pry
+    
   end
 
   def update

@@ -90,6 +90,7 @@ class Dog
     else
 
     end
+    binding.pry
   end
 
   def update

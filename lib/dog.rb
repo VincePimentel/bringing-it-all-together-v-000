@@ -82,6 +82,10 @@ class Dog
     new_dog = self.new(name: dog[1], breed: dog[2], id: dog[0])
   end
 
+  def self.find_or_create_by
+    
+  end
+
   def update
     sql = <<-SQL
       UPDATE dogs

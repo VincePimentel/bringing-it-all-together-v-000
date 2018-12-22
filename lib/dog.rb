@@ -91,7 +91,6 @@ class Dog
       dog = dog_row[0]
       self.new(name: dog[1], breed: dog[2], id: dog[0])
     end
-
   end
 
   def update

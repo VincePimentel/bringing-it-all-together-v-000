@@ -64,7 +64,9 @@ class Dog
       LIMIT 1;
     SQL
 
-    DB[:conn].execute(sql, name)[0]
+    dog = DB[:conn].execute(sql, name)[0]
+
+    self.new(dog[1], dog[2], dog[0])
   end
 
   def update

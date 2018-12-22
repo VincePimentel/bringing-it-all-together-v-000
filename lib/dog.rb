@@ -50,8 +50,8 @@ class Dog
     self
   end
 
-  def self.create(dog_hash)
-    dog = self.new(name: dog_hash[:name], breed: dog_hash[:breed])
+  def self.create(name:, breed:)
+    dog = self.new(name: name, breed: breed)
     dog.save
     dog
   end
@@ -84,7 +84,12 @@ class Dog
 
   def self.find_or_create_by(name:, breed:)
     dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?;", name, breed)
-    binding.pry
+
+    if dog.empty?
+
+    else
+
+    end
   end
 
   def update

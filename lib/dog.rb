@@ -66,7 +66,8 @@ class Dog
 
     dog = DB[:conn].execute(sql, name)[0]
 
-    self.new(dog[1], dog[2], dog[0])
+    new_dog = self.new(dog[1], dog[2], dog[0])
+    new_dog
   end
 
   def update
